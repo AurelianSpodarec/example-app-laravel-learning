@@ -43,9 +43,7 @@ class SiteIndustrySeeder extends Seeder
             [
                 "type" => "Hotels",
                 "slug" => "hotels"
-            ],
-            
-           
+            ] 
         ];
         
 

@@ -13,7 +13,8 @@
 
 
     <div class="flex mb-5">
-        <img class="h-16 w-16 rounded-lg mr-5" src="{{ $logo }}" />
+        <img class="object-cover h-16 w-16 rounded-lg mr-5" src="{{ asset("storage/uploads/" . $logo) }}" />
+        
         <div>
             <span class="flex font-bold text-3xl">{{ $name }}</span>
             <span>{{ $description }}</span>

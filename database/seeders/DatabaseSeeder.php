@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Companies;
+use App\Models\Company;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create(); 
         User::factory(5)->create();
-        Companies::factory(20)->create();
+        Company::factory(10)->create();
         $this->call(SiteIndustrySeeder::class);
     }
 }

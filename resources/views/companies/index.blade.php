@@ -14,12 +14,8 @@
 
 
         </div>
-        <?php 
-            $files = Storage::disk('uploads')->files('logos'); 
-            dd($files);    
-        ?>
+       
         <div class="grid grid-cols-3 gap-8">
-            <img src="{{ asset("storage/uploads/logos/slack.png") }}" />
 
             @foreach ($companies as $company)
             

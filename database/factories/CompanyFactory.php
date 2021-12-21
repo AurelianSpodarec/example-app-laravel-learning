@@ -5,10 +5,11 @@ namespace Database\Factories;
 use App\Models\User;
 use App\Models\SiteIndustry;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Storage;
 
 
 
-class CompaniesFactory extends Factory
+class CompanyFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -45,23 +46,42 @@ class CompaniesFactory extends Factory
             '#61F221'
         ];
 
-       
+        $companiesName = [
+            'Slack',
+            'GymShark',
+            'Nike',
+            'Deliveroo',
+            'Adidas',
+            'Lamborghini',
+            'Ferrari',
+            'YouTube',
+            'LinkedIn',
+            'FaceBook',
+            'Instagram',
+            'Klarna'
+        ];
+
+        
+        $files = Storage::disk('uploads')->files('logos'); 
+        
+        // $companyName = $this->faker->unique()->randomElement($companiesName);
+     
 
         return [
                 'user_id'          => User::factory(),
                 'site_industry_id' => rand(1,7), // number of categories is 7
                 // 'site_type_id'  => $this->faker->name,
 
-                'name'          => $this->faker->name,
-                'slug'          => $this->faker->slug,
-                'description'   => $this->faker->sentence,
+                'name'          => $company = $this->faker->unique()->randomElement($companiesName),
+                'slug'          => $company,
+                'description'   => $this->faker->sentence(),
 
-                'logo'          => $this->faker->randomElement([]),
+                'logo'          => $this->faker->randomElement($files),
                 'thumbnail'     => 'https://source.unsplash.com/random',
 
                 'brand_color'   => $this->faker->randomElement($brandColors),
-                'color_palette' => $this->faker->unique(true)->randomElements( $colors, rand(2,6) ),
-                'version'       => $this->faker->time
+                'color_palette' => $this->faker->unique()->randomElements( $colors, rand(2,6) ),
+                'version'       => $this->faker->time()
         ];
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Companies extends Model
+class Company extends Model
 {
     use HasFactory;
 
@@ -13,7 +13,7 @@ class Companies extends Model
         'color_palette' => 'array',
     ];
 
-    public function site_industry()
+    public function siteIndustry()
     {
         return $this->belongsTo(SiteIndustry::class);
     }
