@@ -17,17 +17,17 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreignId('site_industry_id');
-
+            $table->foreignId('color_palette_id');
+            
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description');
             // $table->string('type');
-
+            
             $table->string('logo');
             $table->string('thumbnail');
             
             $table->string('brand_color');
-            $table->json('color_palette');
 
             $table->time('version');
             $table->timestamps();

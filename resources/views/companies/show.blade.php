@@ -6,13 +6,37 @@
         
 
         <div class="mx-auto text-center">
-            <img class="rounded-2xl mx-auto mb-4" src="https://a.slack-edge.com/80588/marketing/img/meta/slack_hash_256.png" />
+            <img class="rounded-2xl mx-auto mb-4 w-40 h-40 object-cover" src="{{ asset('storage/uploads/'.$companies->logo)    }}" />
             <div>
-                <h1 class="flex font-bold text-4xl">{{ $companies->name }}<h1>
+                <h1 class="font-bold text-4xl">{{ $companies->name }}<h1>
                 <span>{{ $companies->description }}</span>
             </div>
         </div>
     
+
+    </div>
+    </section>
+
+    
+    
+    <section class="max-w-screen-2xl mx-auto py-6 sm:px-6 lg:px-8">   
+    <div class="">
+            
+    
+        <div>
+            <h2 class="font-bold text-4xl mb-4">Color Palette</h2>
+        </div>
+
+
+        {{-- <ul class="flex">
+            @foreach ($companies->color_palette as $color)
+            <li style="background-color: {{ $color }}" class="h-24 w-24 ">
+                {{ $color }}
+            </li>    
+            @endforeach
+
+        </ul> --}}
+
 
     </div>
     </section>
@@ -68,28 +92,6 @@
     </div>
     </section>
 
-    
-    <section class="max-w-screen-2xl mx-auto py-6 sm:px-6 lg:px-8">   
-    <div class="">
-            
-    
-        <div>
-            <h2 class="font-bold text-4xl mb-4">Color Palette</h2>
-        </div>
-
-
-        <ul class="flex">
-            @foreach ($companies->color_palette as $color)
-            <li style="background-color: {{ $color }}" class="h-24 w-24 ">
-                {{ $color }}
-            </li>    
-            @endforeach
-
-        </ul>
-
-
-    </div>
-    </section>
         
 
 </x-layouts.layout>

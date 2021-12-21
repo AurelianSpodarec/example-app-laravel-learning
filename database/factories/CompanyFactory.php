@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\User;
 use App\Models\SiteIndustry;
+use App\Models\ColorPalette;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Storage;
 
@@ -32,20 +33,6 @@ class CompanyFactory extends Factory
             'brown'
         ];
 
-        $colors = [
-            '#3CAD72',
-            '#F25021',
-            '#F23A21',
-            '#F2F121',
-            '#21F2D7',
-            '#2152F2',
-            '#8421F2',
-            '#F221DF',
-            '#F22179',
-            '#F22121',
-            '#61F221'
-        ];
-
         $companiesName = [
             'Slack',
             'GymShark',
@@ -61,26 +48,23 @@ class CompanyFactory extends Factory
             'Klarna'
         ];
 
-        
+        $company = $this->faker->unique()->randomElement($companiesName);
         $files = Storage::disk('uploads')->files('logos'); 
-        
-        // $companyName = $this->faker->unique()->randomElement($companiesName);
-     
 
         return [
                 'user_id'          => User::factory(),
-                'site_industry_id' => rand(1,7), // number of categories is 7
-                // 'site_type_id'  => $this->faker->name,
+                'color_palette_id' => ColorPalette::factory(),
+                'site_industry_id' => rand(1,7),
 
-                'name'          => $company = $this->faker->unique()->randomElement($companiesName),
-                'slug'          => $company,
+                'name'          => $company,
+                'slug'          => strtolower($company),
                 'description'   => $this->faker->sentence(),
 
                 'logo'          => $this->faker->randomElement($files),
                 'thumbnail'     => 'https://source.unsplash.com/random',
 
                 'brand_color'   => $this->faker->randomElement($brandColors),
-                'color_palette' => $this->faker->unique()->randomElements( $colors, rand(2,6) ),
+
                 'version'       => $this->faker->time()
         ];
     }

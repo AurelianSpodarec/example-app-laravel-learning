@@ -19,15 +19,15 @@
 
             @foreach ($companies as $company)
             
-                <x-company 
-                    {{-- logo="https://a.slack-edge.com/80588/marketing/img/meta/slack_hash_256.png" --}}
+                <x-company
                     logo="{{ $company->logo }}"
-                    slug="/companies/{{ $company->slug }}"
                     name="{{ $company->name }}"
+                    slug="/companies/{{ $company->slug }}"
                     description="{{ $company->description }}"
                     brandColor="{{ $company->brand_color }}"
                     thumbnail="https://www.researchgate.net/profile/Pawan-Kalyani/publication/344035167/figure/fig3/AS:931007695970305@1598980940588/Showing-Slack-Homepage-https-slackcom-intl-en-in-Work-from-home-Slack-brings-the.jpg"
                 />
+                
             @endforeach
            
     

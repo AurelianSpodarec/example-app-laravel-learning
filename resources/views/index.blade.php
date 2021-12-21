@@ -46,6 +46,7 @@
             name="Slack"
             description="Order takeaway food online"
             thumbnail="https://www.researchgate.net/profile/Pawan-Kalyani/publication/344035167/figure/fig3/AS:931007695970305@1598980940588/Showing-Slack-Homepage-https-slackcom-intl-en-in-Work-from-home-Slack-brings-the.jpg"
+            brandColor="red"
         />
 
         <x-company 
@@ -54,6 +55,7 @@
             name="Slack"
             description="Order takeaway food online"
             thumbnail="https://www.researchgate.net/profile/Pawan-Kalyani/publication/344035167/figure/fig3/AS:931007695970305@1598980940588/Showing-Slack-Homepage-https-slackcom-intl-en-in-Work-from-home-Slack-brings-the.jpg"
+            brandColor="red"    
         />
 
         <x-company 
@@ -62,6 +64,7 @@
             name="Slack"
             description="Order takeaway food online"
             thumbnail="https://www.researchgate.net/profile/Pawan-Kalyani/publication/344035167/figure/fig3/AS:931007695970305@1598980940588/Showing-Slack-Homepage-https-slackcom-intl-en-in-Work-from-home-Slack-brings-the.jpg"
+            brandColor="red"    
         />
 
 

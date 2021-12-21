@@ -9,13 +9,14 @@ class Company extends Model
 {
     use HasFactory;
 
-    protected $casts = [
-        'color_palette' => 'array',
-    ];
-
     public function siteIndustry()
     {
         return $this->belongsTo(SiteIndustry::class);
+    }
+
+    public function colorPalette()
+    {
+        return $this->belongsTo(ColorPalette::class);
     }
 
 

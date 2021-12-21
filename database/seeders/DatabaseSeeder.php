@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Company;
+use App\Models\ColorPalette;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,9 +17,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create(); 
-        User::factory(5)->create();
-        Company::factory(10)->create();
+        $companies = 10;
+        
         $this->call(SiteIndustrySeeder::class);
+
+        User::factory(5)->create();
+        // ColorPalette::factory($companies)->create();
+        Company::factory($companies)->create();
     }
 }
