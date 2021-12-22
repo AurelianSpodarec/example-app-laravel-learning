@@ -14,6 +14,11 @@ class ColorPalette extends Model
     ];
 
     public function company() {
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo(Company::class, 'companies');
     }
 }
+
+
+
+// home about pricing
+// company site - every single site page, but only specific page should be shown in filter

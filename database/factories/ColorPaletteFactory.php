@@ -4,6 +4,8 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use App\Models\Company;
+
 class ColorPaletteFactory extends Factory
 {
     /**
@@ -29,6 +31,7 @@ class ColorPaletteFactory extends Factory
         ];
         
         return [
+            'company_id' => '1',
             'color_palette' => $this->faker->unique()->randomElements( $colors, rand(2,6) ),
         ];
     }

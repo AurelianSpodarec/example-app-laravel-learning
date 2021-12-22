@@ -9,14 +9,16 @@ class Company extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function siteIndustry()
     {
-        return $this->belongsTo(SiteIndustry::class);
+        return $this->hasOne(SiteIndustry::class);
     }
 
     public function colorPalette()
     {
-        return $this->belongsTo(ColorPalette::class);
+        return $this->hasOne(ColorPalette::class);
     }
 
 

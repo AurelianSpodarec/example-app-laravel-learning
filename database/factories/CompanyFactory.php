@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
-use App\Models\SiteIndustry;
-use App\Models\ColorPalette;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Storage;
 
+use App\Models\User;
+use App\Models\SiteIndustry;
+use App\Models\ColorPalette;
+use App\Models\CompanyPage;
 
 
 class CompanyFactory extends Factory
@@ -45,7 +46,17 @@ class CompanyFactory extends Factory
             'LinkedIn',
             'FaceBook',
             'Instagram',
-            'Klarna'
+            'Klarna',
+            'Scobydoo',
+            'Amazon',
+            'Ebay',
+            'Pinterest',
+            'Dribble',
+            'Behance',
+            'Awwwards',
+            'Metin2',
+            'Cabal',
+            'Margonem'
         ];
 
         $company = $this->faker->unique()->randomElement($companiesName);
@@ -55,6 +66,7 @@ class CompanyFactory extends Factory
                 'user_id'          => User::factory(),
                 'color_palette_id' => ColorPalette::factory(),
                 'site_industry_id' => rand(1,7),
+                'company_page_id'  => CompanyPage::factory(),
 
                 'name'          => $company,
                 'slug'          => strtolower($company),

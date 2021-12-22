@@ -18,6 +18,7 @@ class CreateCompaniesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreignId('site_industry_id');
             $table->foreignId('color_palette_id');
+            $table->foreignId('company_page_id');
             
             $table->string('name');
             $table->string('slug')->unique();

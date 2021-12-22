@@ -1,10 +1,11 @@
 <x-layouts.layout>
 
+    {{-- {{ dd($companies->colorPalette()) }} --}}
     
     <section class="max-w-screen-2xl mx-auto py-6 sm:px-6 lg:px-8">   
     <div class="flex">
+      
         
-
         <div class="mx-auto text-center">
             <img class="rounded-2xl mx-auto mb-4 w-40 h-40 object-cover" src="{{ asset('storage/uploads/'.$companies->logo)    }}" />
             <div>
@@ -26,16 +27,13 @@
         <div>
             <h2 class="font-bold text-4xl mb-4">Color Palette</h2>
         </div>
+  
 
-
-        {{-- <ul class="flex">
-            @foreach ($companies->color_palette as $color)
-            <li style="background-color: {{ $color }}" class="h-24 w-24 ">
-                {{ $color }}
-            </li>    
-            @endforeach
-
-        </ul> --}}
+        <ul class="flex">    
+        @foreach($companies->colorPalette->color_palette as $color)
+            <div style="background-color: {{ $color }}" class="h-12 w-12"></div>  
+        @endforeach
+        </ul>
 
 
     </div>
@@ -50,20 +48,25 @@
             <h2 class="font-bold text-4xl mb-4">Pages</h2>
         </div>
 
-        <div>
-            <span>Home</span>
-            <span>About</span>
-            <span>Contact</span>
+        <div class="flex">
+            <div class="w-1/5">
+                <div class="flex flex-col">
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>Contact</span>
+                </div>
+            </div>
+
+            <div class="w-4/5">
+            <ul class="grid grid-cols-3">
+
+                <img src="https://i.imgur.com/cQOX8dX.png" />
+                <img src="https://i.imgur.com/BRHZeNT.png" />
+                <img src="https://i.imgur.com/aOZTEAV.png" />
+
+            </ul>
+            </div>
         </div>
-
-
-        <ul class="grid grid-cols-3">
-
-           <img src="https://i.imgur.com/cQOX8dX.png" />
-           <img src="https://i.imgur.com/BRHZeNT.png" />
-           <img src="https://i.imgur.com/aOZTEAV.png" />
-
-        </ul>
 
 
     </div>
