@@ -1,9 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 use App\Models\Post;
+
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ColorPaletteController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +26,9 @@ Route::get('/', function () {
 
 Route::get('companies', [CompanyController::class, 'index']);
 Route::get('companies/{companies:slug}', [CompanyController::class, 'show']);
+
+Route::get('company', [CompanyController::class, 'index']);
+
+Route::get('company-pages', [CompanyPageController::class, 'index']);
 
 Route::get('color-palettes', [ColorPaletteController::class, 'index']);

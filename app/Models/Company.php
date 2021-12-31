@@ -21,5 +21,9 @@ class Company extends Model
         return $this->hasOne(ColorPalette::class);
     }
 
+    public function companyPage()
+    {
+        return $this->hasMany(ColorPalette::class);
+    }
 
 }

@@ -18,6 +18,7 @@
             <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4"> 
                 <a href="{{ url('/companies') }}" class="   text-gray-900  px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Companies</a>
+                <a href="{{ url('/company-pages') }}" class="text-gray-900  px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Pages</a>
                 <a href="#" class="text-gray-900  px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Blocks</a>
                 <a href="{{ url('/color-palettes') }}" class="text-gray-900  px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Color Palette</a>
             </div>

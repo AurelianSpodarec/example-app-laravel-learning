@@ -4,7 +4,7 @@
     <section class="max-w-screen-2xl mx-auto py-6 sm:px-6 lg:px-8">   
 
         <div> 
-
+        
             <div class=""
             <label for="pet-select">Industry</label>
             <select name="pets" id="pet-select">

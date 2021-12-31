@@ -16,6 +16,7 @@ class CompanyPageFactory extends Factory
     public function definition()
     {
         return [
+            'company_id' => 1,
             'image' => "w",
             'show_in_filter' => false,
             'page_name' => "hi"
